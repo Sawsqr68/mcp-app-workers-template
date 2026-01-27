@@ -64,7 +64,7 @@ function registerWidget(
     config.resourceUri,
     {
       description: config.descripition,
-      mimeType: "text/html+mcp",
+      mimeType: "text/html;profile=mcp-app",
     },
     async (uri) => {
       const htmlContent = await loadHtml(assets, config.htmlPath);
@@ -112,7 +112,7 @@ function registerWidget(
         _meta?: typeof meta;
       } = {
         uri: uri.href,
-        mimeType: "text/html+mcp",
+        mimeType: "text/html;profile=mcp-app",
         text: htmlContent,
       };
 
@@ -143,7 +143,8 @@ export function createMcpServer(assets?: AssetsBinding) {
     htmlPath: "/anime-detail-widget.html",
     resourceUri: "ui://widget/anime-detail-widget.html",
     descripition: "Interactive anime detail widget UI",
-    resourceDomains: ["https://cdn.myanimelist.net/"],
+    // "https://cdn.myanimelist.net/"
+    resourceDomains: [],
   });
 
   server.registerTool(
@@ -158,7 +159,9 @@ export function createMcpServer(assets?: AssetsBinding) {
           .describe("Anime title to search for"),
       }),
       _meta: {
-        "ui/resourceUri": "ui://widget/anime-detail-widget.html",
+        ui: {
+          resourceUri: "ui://widget/anime-detail-widget.html",
+        }
       },
     },
     async ({ query }) => {
