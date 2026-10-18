@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@modelcontextprotocol/ext-apps": "github:modelcontextprotocol/ext-apps",
-    "@modelcontextprotocol/sdk": "^1.23.0",
+    "@modelcontextprotocol/sdk": "^1.32.1",
     "@tailwindcss/vite": "^4.1.17",
-    "agents": "^0.2.26",
+    "agents": "^0.2.35",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "hono": "^4.10.7",
@@ -30,8 +30,8 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
     "prettier": "^3.7.3",
-    "vite": "^7.2.6",
+    "vite": "^7.3.7",
     "vite-plugin-singlefile": "^2.3.0",
-    "wrangler": "^4.4.0"
+    "wrangler": "^4.151.1"
   }
 }
